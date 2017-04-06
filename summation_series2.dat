@@ -1,0 +1,6 @@
+k := 1;
+m := 10;
+sum := m + 1;
+sum := sum * m;
+sum := sum / 2;
+product := sum * sum;

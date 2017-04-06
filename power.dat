@@ -1,0 +1,6 @@
+a := 2;
+b := 7;
+result := a;
+TO b - 1 DO
+    result := result * a
+END    

@@ -1,0 +1,10 @@
+k := 1;
+m := 10;
+sum1 := 0;
+TO m DO
+  sum1 := sum1 + k;
+  k := k + 1
+END;
+sum2 := m + 1;
+sum2 := sum2 * m;
+sum2 := sum2 / 2

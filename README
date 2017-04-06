@@ -1,0 +1,36 @@
+= Simple CPU Simulator =
+
+A project written by Michael Crenshaw <mcrenshaw10@gmail.com> to fulfill Honors
+Petition requirements for CSIS 434-001, Spring 2016.
+
+== Usage ==
+
+CPU.py when run alone checks for a file named program.dat in the current working
+directory. It then assembles that code, compiles it, and then runs it. It writes
+output from the lexical analyser, assembler, and compiler to intuitively-named
+output files, and it writes the CPU's register and memory data to cpu_output.txt
+and prints it to the screen.
+
+If no program.dat exists, a default program hard-coded in CPU.py will be 
+executed.
+
+== Language Definition ==
+
+<program> -> <series>
+<series> -> <statement> | <statement>; <series>
+<statement> -> <assign statement> | <loop>
+<assign statement> -> <variable> := <expression>
+<definite loop> -> TO <expression> DO <segment> END
+<segment> -> <assign statement> | <assign statement>; <segment>
+<expression> -> <element> | <element> <math operator> <element>
+<element> -> <constant> | <variable>
+<constant> -> <digit> | <constant> <digit>
+<variable> -> <letter> | <variable> <letter> | <variable> <digit>
+<math operator> -> + | - | * | /
+<digit> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<letter> -> a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | 
+            r | s | t | u | v | w | x | y | z
+
+Two major limitations of this language are that it does not allow nested loops
+and that it does not allow complex math operations (that is, they must occur one
+at a time). 

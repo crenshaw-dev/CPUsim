@@ -1,0 +1,9 @@
+x := 1;
+TO 3 DO
+    abc := 5 + x;
+    x := abc * 2
+END;
+w := x;
+TO 2 DO
+    w := w * 2
+END
